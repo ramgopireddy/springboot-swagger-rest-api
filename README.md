@@ -11,7 +11,7 @@ While searching through GitHub for some boilerplate code on how to setup a Sprin
 
 You can import the code straight into your preferred IDE or run the sample using the following command (in the root project folder).
 
-```console
+```bash
 $  mvn spring-boot:run
 ```
 After the application runs, navigate to `http://localhost:7001/swagger-ui/index.html?configUrl=/api-docs/swagger-config` in your web browser to access the Swagger UI portal.
