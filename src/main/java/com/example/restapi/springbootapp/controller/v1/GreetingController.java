@@ -22,6 +22,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @OpenAPIDefinition(servers = { @Server(url = "http://localhost:7001") }, info = @Info(title = "Sample Spring Boot API", version = "v1", description = "A demo project using Spring Boot with Swagger-UI enabled", license = @License(name = "MIT License", url = "https://github.com/bchen04/springboot-swagger-rest-api/blob/master/LICENSE"), contact = @Contact(url = "https://www.linkedin.com/in/bchen04/", name = "Ben Chen")))
 @RestController
+@RequestMapping("v1/greeting")
 public class GreetingController {
 
     private static final String template = "Hello, %s!";
@@ -30,7 +31,7 @@ public class GreetingController {
     @Operation(summary = "Returns a greeting message")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "successful operation", content = @Content(schema = @Schema(type = "object"))) })
-    @GetMapping(value = "/v1/greeting", produces = { "application/json" })
+    @GetMapping(value = "/message", produces = { "application/json" })
     public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
