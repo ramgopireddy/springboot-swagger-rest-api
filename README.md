@@ -7,7 +7,7 @@ While searching through GitHub for some boilerplate code on how to setup a Sprin
 * Java 14
 * Maven 3.2+
 
-## Build and run the sample
+## Build and Run the Sample
 
 You can import the code straight into your preferred IDE or run the sample using the following command (in the root project folder).
 
