@@ -30,7 +30,7 @@ public class GreetingController {
     @Operation(summary = "Returns a greeting message")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "successful operation", content = @Content(schema = @Schema(type = "object"))) })
-    @GetMapping(value = "/greeting", produces = { "application/json" })
+    @GetMapping(value = "/v1/greeting", produces = { "application/json" })
     public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
