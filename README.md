@@ -4,7 +4,7 @@ While searching through GitHub for some boilerplate code on how to setup a Sprin
 
 ## What You Need
 
-* Java 14
+* Java 11
 * Maven 3.6.0+
 
 ## Build and Run the Sample
